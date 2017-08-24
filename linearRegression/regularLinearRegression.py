@@ -1,15 +1,13 @@
 # -*- coding: utf-8 -*-
 """Linear regression for machine learning
 
-This file demonstrate knowledge of linear regression. Both by using
-conventional libraries and by doing everything from scratch.The idea of linear
+This file demonstrate knowledge of linear regression. By using
+conventional libraries.The idea of linear
 regression is to take continuous data and find the best fit of it to a line.
-
-LOOK AT THE BOTTOM WHERE I WILL GO THROUGH LINEAR REGRESSION FROM SCRATCH.
 
 Example:
 
-        $ python linearRegression.py
+        $ python regularLinearRegression.py
 
 Todo:
     *
