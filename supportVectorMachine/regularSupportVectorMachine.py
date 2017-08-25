@@ -7,6 +7,8 @@ decision boundary. And it decides what separating hyperplane is the 'best'
 because the distance from it and the associating data it is separating is the
 greatest at the plane in question.
 
+This is the file where I create use scikit-learn to use the algorithm.
+
 dataset is breast cancer data from: http://archive.ics.uci.edu/ml/datasets.html
 
 Example:
