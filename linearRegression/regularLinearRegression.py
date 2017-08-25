@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Linear regression for machine learning
+"""Linear regression for machine learning.
 
 This file demonstrate knowledge of linear regression. By using
 conventional libraries.The idea of linear
@@ -24,8 +24,9 @@ import numpy as np
 
 import quandl
 
-from sklearn import preprocessing, svm
-from sklearn.linear_model import LinearRegression
+from sklearn import preprocessing
+# from sklearn import svm
+# from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
 
