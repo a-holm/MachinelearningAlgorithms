@@ -16,11 +16,14 @@ Todo:
 import datetime
 import math
 import pickle
+
 from matplotlib import style
 import matplotlib.pyplot as plt
+
 import numpy as np
-import pandas as pd
+
 import quandl
+
 from sklearn import preprocessing, svm
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
@@ -39,7 +42,7 @@ df = df[['adj_open', 'adj_high', 'adj_low', 'adj_close', 'adj_volume']]
 df['HL_PCT'] = (df['adj_high'] - df['adj_low']) / df['adj_low'] * 100.0
 # Percent  point change from open to close
 df['PCT_Change'] = (df['adj_close'] - df['adj_open']) / df['adj_open'] * 100.0
-# Just the parts we want
+# Just the parts we want for simplicity's sake
 df = df[['adj_close', 'HL_PCT', 'PCT_Change', 'adj_volume']]
 
 forecast_col = 'adj_close'
