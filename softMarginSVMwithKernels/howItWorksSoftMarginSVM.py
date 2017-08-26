@@ -141,27 +141,27 @@ class SVM(object):
         else:
             self.w = None
 
-        def project(self, X):
-            """Method is useful for getting the prediction depending on kernel.
+    def project(self, X):
+        """Method is useful for getting the prediction depending on kernel.
 
-            Return:
-                (int or np.array of ints) A number which indicate the
-            classification of the features by being positive or negative.
-            """
-            if self.w is not None:
-                return np.dot(X, self.w) + self.b
-            else:
-                y_predict = np.zeros(len(X))
-                for i in range(len(X)):
-                    s = 0
-                    for a, sv_y, sv in zip(self.a, self.sv_y, self.sv):
-                        s += a * sv_y * self.kernel(X[i], sv)
-                    y_predict[i] = s
-                return y_predict + self.b
+        Return:
+            (int or np.array of ints) A number which indicate the
+        classification of the features by being positive or negative.
+        """
+        if self.w is not None:
+            return np.dot(X, self.w) + self.b
+        else:
+            y_predict = np.zeros(len(X))
+            for i in range(len(X)):
+                s = 0
+                for a, sv_y, sv in zip(self.a, self.sv_y, self.sv):
+                    s += a * sv_y * self.kernel(X[i], sv)
+                y_predict[i] = s
+            return y_predict + self.b
 
-        def predict(self, X):
-            """Method to predict features X."""
-            return np.sign(self.project(X))
+    def predict(self, X):
+        """Method to predict features X."""
+        return np.sign(self.project(X))
 
 if __name__ == '__main__':
 
@@ -182,12 +182,12 @@ if __name__ == '__main__':
         mean2 = [1, -1]
         mean3 = [4, -4]
         mean4 = [-4, 4]
-        cov = np.array([[1.0, 0.8], [0.8, 1.0]])
+        cov = [[1.0,0.8], [0.8, 1.0]]
         X1 = np.random.multivariate_normal(mean1, cov, 50)
-        X1 = np.vstack(np.random.multivariate_normal(mean3, cov, 50))
+        X1 = np.vstack((X1, np.random.multivariate_normal(mean3, cov, 50)))
         y1 = np.ones(len(X1))
         X2 = np.random.multivariate_normal(mean2, cov, 50)
-        X2 = np.vstack(np.random.multivariate_normal(mean4, cov, 50))
+        X2 = np.vstack((X2, np.random.multivariate_normal(mean4, cov, 50)))
         y2 = np.ones(len(X2)) * -1
         return X1, y1, X2, y2
 
@@ -213,7 +213,7 @@ if __name__ == '__main__':
         X2_train = X2[:90]
         y2_train = y2[:90]
         X_train = np.vstack((X1_train, X2_train))
-        y_train = np.vstack((y1_train, y2_train))
+        y_train = np.hstack((y1_train, y2_train))
         return X_train, y_train
 
     def split_test(X1, y1, X2, y2):
@@ -223,6 +223,48 @@ if __name__ == '__main__':
         X2_test = X2[90:]
         y2_test = y2[90:]
         X_test = np.vstack((X1_test, X2_test))
-        y_test = np.vstack((y1_test, y2_test))
+        y_test = np.hstack((y1_test, y2_test))
         return X_test, y_test
 
+    def test_linear():
+        """Function to test linear kernel."""
+        X1, y1, X2, y2 = gen_lin_seperable_data()
+        X_train, y_train = split_train(X1, y1, X2, y2)
+        X_test, y_test = split_test(X1, y1, X2, y2)
+
+        clf = SVM()  # because it's convention to use clf
+        clf.fit(X_train, y_train)
+
+        y_predict = clf.predict(X_test)
+        correct = np.sum(y_predict == y_test)
+        print("%d out of %d predictions correct" % (correct, len(y_predict)))
+
+    def test_non_linear():
+        """Function to test polynomial kernel."""
+        X1, y1, X2, y2 = gen_non_lin_seperable_data()
+        X_train, y_train = split_train(X1, y1, X2, y2)
+        X_test, y_test = split_test(X1, y1, X2, y2)
+
+        clf = SVM(polynomial_kernel)  # because it's convention to use clf
+        clf.fit(X_train, y_train)
+
+        y_predict = clf.predict(X_test)
+        correct = np.sum(y_predict == y_test)
+        print("%d out of %d predictions correct" % (correct, len(y_predict)))
+
+    def test_soft():
+        """Function to test linear kernel with soft margin."""
+        X1, y1, X2, y2 = gen_lin_seperable_overlap_data()
+        X_train, y_train = split_train(X1, y1, X2, y2)
+        X_test, y_test = split_test(X1, y1, X2, y2)
+
+        clf = SVM(C=1000.1)  # because it's convention to use clf
+        clf.fit(X_train, y_train)
+
+        y_predict = clf.predict(X_test)
+        correct = np.sum(y_predict == y_test)
+        print("%d out of %d predictions correct" % (correct, len(y_predict)))
+
+    # test_linear()
+    test_non_linear()
+    # test_soft()
