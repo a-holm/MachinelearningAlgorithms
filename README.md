@@ -21,6 +21,11 @@ The linear regression is a way to model linear data and thereby be able to predi
   * `linearregression.pickle` - The trained data saved as a pickle file to save computing time. (see *regularLinearRegression.py*)
   * `regularLinearRegression.py` - The algorithm coded with Scikit-learn (python library for machine learning).
 
+### **_softMarginSVMwithKernels_** 
+Soft margin SVM is basically an SVM (see folder **supportVectorMachine**) which has some 'slack' and allows features to be 'wrongly' classified to avoid overfitting the classifier. This also includes kernels. Kernels use the inner product to help us transform the feature space to make it possible for Support Vector Machines to create a good hyperplane with non-linear feature sets.
+
+  * `howItWorksSoftMarginSVM.py` - The algorithm coded from scratch.
+
 ### **_supportVectorMachine_** 
 Support vector machines (SVMs) are supervised learning models with associated learning algorithms that analyze data used for classification and regression analysis. The objective of the SVM is to find the best separating hyperplane in vector space which is also referred to as the decision boundary.
 
