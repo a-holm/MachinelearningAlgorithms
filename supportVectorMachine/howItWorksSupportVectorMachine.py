@@ -8,9 +8,8 @@ because the distance from it and the associating data it is separating is the
 greatest at the plane in question. The SVM classifies as either on the positive
 or negative side of the hyperplane.
 
-This is the file where I create the algorithm from scratch.
-
-dataset is breast cancer data from: http://archive.ics.uci.edu/ml/datasets.html
+This is the file where I create the algorithm from scratch. This is algorithm
+for 2D data.
 
 Example:
 
@@ -39,7 +38,7 @@ class SupportVectorMachine:
             visualization (bool): Default set to True due to debugging
         """
         self.visualization = visualization
-        self.colors = {1: 'r', -1: 'b'}
+        self.colors = {1: 'r', -1: 'c'}
         if visualization:
             self.fig = plt.figure()
             self.ax = self.fig.add_subplot(1, 1, 1)
@@ -91,7 +90,7 @@ class SupportVectorMachine:
         for step in step_sizes:
             w = np.array([latest_optimum, latest_optimum])
             optimized = False  # We can use this because convex problem.
-            while not optimized:
+            while not optimized:  # following code can probably be threaded
                 for b in np.arange(
                     -1 * (self.max_feature_value * b_range_multiple),
                     self.max_feature_value * b_range_multiple,
@@ -137,11 +136,58 @@ class SupportVectorMachine:
         """
         # just see if (x.w+b) is negative or positive
         classification = np.sign(np.dot(np.array(features), self.w) + self.b)
-
+        if classification != 0 and self.visualization:
+            self.ax.scatter(features[0], features[1], marker="*",
+                            s=80, c=self.colors[classification])
         return classification
 
+    def visualize(self):
+        """Method for visualization and plotting."""
+        [[self.ax.scatter(x[0], x[1], s=100, color=self.colors[i])
+          for x in data_dict[i]] for i in data_dict]
+
+        def hyperplane(x, w, b, v):  # hyperplane v = x.w+b
+            """Method to return values of hyperplanes for visualization.
+
+            Args:
+                x, w, b (int): values to figure out the hyperplane = x.w+b
+                v (int): value of the hyperplane, either the positive support
+                        vector (1), the negative support vector (-1) or the
+                        decision boundary (0).
+            """
+            return (-w[0] * x - b + v) / w[1]
+        datarng = (self.min_feature_value * 0.9, self.max_feature_value * 1.1)
+        hyp_x_min = datarng[0]
+        hyp_x_max = datarng[1]
+
+        # plot positive support vector hyperplane. (w.x+b) = 1
+        psv1 = hyperplane(hyp_x_min, self.w, self.b, 1)
+        psv2 = hyperplane(hyp_x_max, self.w, self.b, 1)
+        self.ax.plot([hyp_x_min, hyp_x_max], [psv1, psv2], 'k')
+
+        # plot negative support vector hyperplane. (w.x+b) = -1
+        nsv1 = hyperplane(hyp_x_min, self.w, self.b, -1)
+        nsv2 = hyperplane(hyp_x_max, self.w, self.b, -1)
+        self.ax.plot([hyp_x_min, hyp_x_max], [nsv1, nsv2], 'k')
+
+        # plot decision boundary hyperplane. (w.x+b) = 0
+        db1 = hyperplane(hyp_x_min, self.w, self.b, 0)
+        db2 = hyperplane(hyp_x_max, self.w, self.b, 0)
+        self.ax.plot([hyp_x_min, hyp_x_max], [db1, db2], 'y--')
+
+        plt.show()
 
 # get training data
 negative_array = np.array([[1, 7], [2, 8], [3, 8]])
 positive_array = np.array([[5, 1], [6, -1], [7, 3]])
 data_dict = {-1: negative_array, 1: positive_array}
+
+svm = SupportVectorMachine()
+svm.fit(data=data_dict)
+
+# prediction data and prediction
+pred_test = [[0, 10], [1, 3], [3, 4], [3, 5], [5, 5], [5, 6], [6, -5], [5, 8]]
+for p in pred_test:
+    svm.predict(p)
+
+svm.visualize()
