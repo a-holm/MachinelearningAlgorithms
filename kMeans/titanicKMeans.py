@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """K-Means unsupervised classification for machine learning.
 
-K-means clustering is a unsupervised method to cluser or group the data.
+K-means clustering is a unsupervised method to flatly cluser or group the data.
 K-means allows you to choose the number (k) of categories/groups and
 categorizes it automatically when it has come up with solid categories.
 
@@ -22,11 +22,10 @@ Example:
 Todo:
     *
 """
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 from matplotlib import style
 import numpy as np
 from sklearn.cluster import KMeans
-from sklearn.model_selection import train_test_split
 from sklearn import preprocessing
 import pandas as pd
 style.use('ggplot')
@@ -80,4 +79,22 @@ def handle_non_numerical_data(df):
     return df
 
 df = handle_non_numerical_data(df)
-print(df.head())
+# print(df.head())
+df.drop(['boat'], 1, inplace=True)  # drop Lifeboat col because it has effect.
+
+X = np.array(df.drop(['survived'], 1).astype(float))
+X = preprocessing.scale(X)
+y = np.array(df['survived'])
+
+clf = KMeans(n_clusters=2)
+clf.fit(X)
+
+correct = 0
+for i in range(len(X)):
+    predict_me = np.array(X[i].astype(float))
+    predict_me = predict_me.reshape(-1, len(predict_me))
+    prediction = clf.predict(predict_me)
+    if prediction[0] == y[i]:
+        correct += 1
+
+print(correct / len(X))
