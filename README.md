@@ -1,4 +1,4 @@
-# Machine learning Algorithms in Python
+# Machine learning and Artificial intelligence projects in Python
 Python examples of machine learning algorithms. All examples are shown by using conventional libraries for machine learning and by also building the algorithms from scratch.
 Each algorithm has it's own folder.
 
