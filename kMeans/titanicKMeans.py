@@ -12,6 +12,9 @@ This file uses an imported titanic.xls file which contains non-numeric data and
 shows how I would deal with such data. The data is found on the internet, but
 the original source is unknown.
 
+found it at the address:
+http://pythonprogramming.net/static/downloads/machine-learning-data/titanic.xls
+
 Example:
 
         $ python titanicKMeans.py
@@ -23,6 +26,9 @@ import matplotlib.pyplot as plt
 from matplotlib import style
 import numpy as np
 from sklearn.cluster import KMeans
+from sklearn.model_selection import train_test_split
+from sklearn import preprocessing
+import pandas as pd
 style.use('ggplot')
 
 """
@@ -43,3 +49,35 @@ boat - Lifeboat
 body - Body Identification Number
 home.dest - Home/Destination
 """
+
+df = pd.read_excel('titanic.xls')
+# print(df.head())
+df.drop(['body', 'name'], 1, inplace=True)
+df.convert_objects(convert_numeric=True)
+df.fillna(0, inplace=True)
+# print(df.head())
+
+
+def handle_non_numerical_data(df):
+    """Function to handle non-numerical data in the dataset."""
+    columns = df.columns.values
+
+    for column in columns:
+        text_digit_values = {}
+
+        def convert_to_int(val):
+            """Convert non-numerical value to int."""
+            return text_digit_values[val]
+        if df[column].dtype != np.int64 and df[column].dtype != np.float64:
+            column_contents = df[column].values.tolist()
+            unique_elements = set(column_contents)
+            x = 0
+            for unique in unique_elements:
+                if unique not in text_digit_values:
+                    text_digit_values[unique] = x
+                    x += 1
+            df[column] = list(map(convert_to_int, df[column]))
+    return df
+
+df = handle_non_numerical_data(df)
+print(df.head())
