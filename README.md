@@ -24,10 +24,14 @@ The linear regression is a way to model linear data and thereby be able to predi
 ### **_softMarginSVMwithKernels_** 
 Soft margin SVM is basically an SVM (see folder **supportVectorMachine**) which has some 'slack' and allows features to be 'wrongly' classified to avoid overfitting the classifier. This also includes kernels. Kernels use the inner product to help us transform the feature space to make it possible for Support Vector Machines to create a good hyperplane with non-linear feature sets.
 
+This can basically do the same as the "from scratch" algorithm in folder **supportVectorMachine**, but this is much more complex to account for margins and more dimensions involved.
+
   * `howItWorksSoftMarginSVM.py` - The algorithm coded from scratch.
 
 ### **_supportVectorMachine_** 
 Support vector machines (SVMs) are supervised learning models with associated learning algorithms that analyze data used for classification and regression analysis. The objective of the SVM is to find the best separating hyperplane in vector space which is also referred to as the decision boundary.
+
+The algorithm coded from scratch is a bare-bones and simple implementation to mainly show the thinking clearly without adding a lot of other elements.
 
   * `breast-cancer-wisconsin.data` - Data used in the example.
   * `howItWorksSupportVectorMachine.py` - The algorithm coded from scratch.
