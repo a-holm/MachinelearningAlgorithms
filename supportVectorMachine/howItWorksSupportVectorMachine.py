@@ -9,7 +9,7 @@ greatest at the plane in question. The SVM classifies as either on the positive
 or negative side of the hyperplane.
 
 This is the file where I create the algorithm from scratch. This is algorithm
-for 2D data.
+for linear 2D data.
 
 Example:
 
