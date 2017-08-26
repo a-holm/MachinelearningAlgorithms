@@ -4,7 +4,13 @@ Each algorithm has it's own folder.
 
 By making the algorithms from scratch I hope to show that I do not only know how to use the algorithms, but I also understand how it functions. By using conventional libraries for machine learning I hope to show that I can be effective and take advantage of the high-performance backend of libraries like for example, Scikit-learn and Tensorflow.
 
-## CONTENTS:
+## CONTENTS (in alphabetical order):
+
+### **_kMeans_** 
+K-means clustering is a unsupervised method to cluser or group the data. K-means allows you to choose the number (k) of categories/groups and categorizes it automatically when it has come up with solid categories.
+
+  * `howItWorksKMeans.py` - The algorithm coded from scratch.
+  * `regularKMeans.py` - The algorithm coded with Scikit-learn (python library for machine learning).
 
 ### **_kNearestNeighbors_** 
 The k-nearest neighbors algorithm is a method used for classification and regression. The idea of K Nearest Neighbors classification is to best divide and separate the data based on clustering the data and to classify based on the proximity to it's K closest neighbors and their classifications. Where 'k' is the number of neighbors that are involved in the classification.
