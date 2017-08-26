@@ -33,7 +33,7 @@ class SupportVectorMachine:
     """
 
     def __init__(self, visualization=True):
-        """Docstring on the __init__ method.
+        """The __init__ method of the SupportVectorMachine class.
 
         Args:
             visualization (bool): Default set to True due to debugging
@@ -75,9 +75,55 @@ class SupportVectorMachine:
         self.min_feature_value = min(all_data)
         all_data = None  # to avoid holding it in memory
 
+        # starting values for training algorithm
         step_sizes = [self.max_feature_value * 0.1,
                       self.max_feature_value * 0.01,
                       self.max_feature_value * 0.001]
+        # b is expensive and does not need to be as precise.
+        b_range_multiple = 5
+        # we do not need to take as small steps with b as we do with w.
+        # we could do it, but it would make it too complex for just a portfolio
+        b_multiple = 5
+        # to cut a few memory corners all w = [latest_optimum, latest_optimum]
+        optimum_multiplier = 10
+        latest_optimum = self.max_feature_value * optimum_multiplier
+
+        for step in step_sizes:
+            w = np.array([latest_optimum, latest_optimum])
+            optimized = False  # We can use this because convex problem.
+            while not optimized:
+                for b in np.arange(
+                    -1 * (self.max_feature_value * b_range_multiple),
+                    self.max_feature_value * b_range_multiple,
+                        step * b_multiple):
+                    for transformation in transforms:
+                        w_t = w * transformation
+                        found_option = True
+                        """
+                        Here is the point that could probably be speeded up
+                        this is the weakest part of the algorithm. I have
+                        more algoritms to show of so I am not going to use
+                        time to make this more effective. There are libraries
+                        that are more effective anyway.
+                        """
+                        # TODO: Possibly add a break later
+                        for i in self.data:
+                            for xi in self.data[i]:
+                                yi = i
+                                if not yi * (np.dot(w_t, xi) + b) >= 1:
+                                    found_option = False
+                        if found_option:
+                            opt_dict[np.linalg.norm(w_t)] = [w_t, b]
+                if w[0] < 0:
+                    optimized = True
+                    print('Optimized a step')
+                else:
+                    w = w - step
+            norms = sorted([n for n in opt_dict])
+            opt_choice = opt_dict[norms[0]]
+            self.w = opt_choice[0]
+            self.b = opt_choice[1]
+            latest_optimum = opt_choice[0][0] + step * 2
 
     def predict(self, features):
         """Method to predict features based on the SVM object.
