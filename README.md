@@ -26,7 +26,7 @@ Soft margin SVM is basically an SVM (see folder **supportVectorMachine**) which 
 
 This can basically do the same as the "from scratch" algorithm in folder **supportVectorMachine**, but this is much more complex to account for margins and more dimensions involved.
 
-I also added methods to check and fix non-linear data.
+I also added methods to check and predict non-linear data.
 
   * `howItWorksSoftMarginSVM.py` - The algorithm coded from scratch.
 
