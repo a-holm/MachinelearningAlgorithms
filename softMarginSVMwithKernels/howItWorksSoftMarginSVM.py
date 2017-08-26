@@ -7,9 +7,7 @@ overfitting the classifier. This also includes kernels. Kernels use the inner
 product to help us transform the feature space to make it possible for Support
 Vector Machines to create a good hyperplane with non-linear feature sets.
 
-I basically just do the 'from scratch' in this part because all this can easily
-be done by just adding some parameters to sklearn's svm.SVC(). This file can
-basically do the same as the "from scratch" algorithm in folder
+This file can basically do the same as the "from scratch" algorithm in folder
 "supportVectorMachine", but this is much more complex to account for margins
 and more dimensions involved. This also involves more complex math, matrix
 algebra and Lagrange multipliers.
