@@ -28,7 +28,10 @@ This can basically do the same as the "from scratch" algorithm in folder **suppo
 
 I also added methods to check and predict non-linear data.
 
+  * `breast-cancer-wisconsin.data` - Data used in the example.
   * `howItWorksSoftMarginSVM.py` - The algorithm coded from scratch.
+  * `regularSoftMarginSVM.py` - The algorithm coded with Scikit-learn (python library for machine learning).
+
 
 ### **_supportVectorMachine_** 
 Support vector machines (SVMs) are supervised learning models with associated learning algorithms that analyze data used for classification and regression analysis. The objective of the SVM is to find the best separating hyperplane in vector space which is also referred to as the decision boundary.

@@ -7,7 +7,10 @@ overfitting the classifier. This also includes kernels. Kernels use the inner
 product to help us transform the feature space to make it possible for Support
 Vector Machines to create a good hyperplane with non-linear feature sets.
 
-This file uses sklearn and other common python libraries to solve the SVM
+This file uses sklearn and other common python libraries to solve the SVM and
+includes contemporary ways to use SVMs, including how to separate more than two
+classes of data with One-vs-rest (OVR) and One-vs-One (OVO) because SVMs are
+binary classifiers so intially they only classify into two classes.
 
 dataset is breast cancer data from: http://archive.ics.uci.edu/ml/datasets.html
 
@@ -32,7 +35,7 @@ y = np.array(df['class'])  # labels
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
-clf = neighbors.KNeighborsClassifier()
+clf = svm.SVC(kernel='linear', C=100.0)  # Linear kernel with soft margin
 clf.fit(X_train, y_train)
 
 # Could have saved in a pickle, but not a very large data set.
