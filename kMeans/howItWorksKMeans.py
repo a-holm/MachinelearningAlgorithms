@@ -13,14 +13,14 @@ Example:
         $ python howItWorksKMeans.py
 
 Todo:
-    *
+    * Rewrite code to function with Titanic data set.
 """
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 from matplotlib import style
 import numpy as np
 
 style.use('ggplot')
-colors = ["g.", "r.", "c.", "b.", "k."]
+colors = ["g", "r", "c", "b", "k"]
 
 X = np.array([[1, 2], [1.5, 1.8], [5, 8], [8, 8], [1, 0.6], [9, 11]])
 
@@ -63,7 +63,6 @@ class KMeans:
                 distances = [
                     np.linalg.norm(featureset - self.centroids[centroid])
                     for centroid in self.centroids]
-                print(distances)
                 classification = distances.index(min(distances))
                 self.classifications[classification].append(featureset)
             prev_centroids = dict(self.centroids)
@@ -83,4 +82,30 @@ class KMeans:
 
     def predict(self, data):
         """Method to predict what cluster data belongs to."""
-        pass
+        distances = [
+            np.linalg.norm(data - self.centroids[centroid])
+            for centroid in self.centroids]
+        classification = distances.index(min(distances))
+        return classification
+
+clf = KMeans()
+clf.fit(X)
+
+for centroid in clf.centroids:
+    plt.scatter(clf.centroids[centroid][0], clf.centroids[centroid][1],
+                marker="x", color="k", s=150, linewidths=5)
+
+for classification in clf.classifications:
+    color = colors[classification]
+    for featureset in clf.classifications[classification]:
+        plt.scatter(featureset[0], featureset[1], marker="o", color=color,
+                    s=150, linewidths=5)
+
+unknowns = np.array([[1, 3], [8, 9], [0, 3], [5, 4], [6, 4]])
+
+for unknown in unknowns:
+    classification = clf.predict(unknown)
+    plt.scatter(unknown[0], unknown[1], marker="*",
+                color=colors[classification], s=150, linewidths=5)
+
+plt.show()
