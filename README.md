@@ -11,6 +11,9 @@ K-means clustering is a unsupervised method to cluser or group the data. K-means
 
   * `howItWorksKMeans.py` - The algorithm coded from scratch.
   * `regularKMeans.py` - The algorithm coded with Scikit-learn (python library for machine learning).
+  * `titanicKMeans.py` - This is similar to `regularKMeans.py`, but is more advanced and uses an imported titanic.xls file which contains non-numeric data so that I can how I would handle such data.
+  * `titanic.xls` - Data that looks like a passager list on the Titanic.
+
 
 ### **_kNearestNeighbors_** 
 The k-nearest neighbors algorithm is a method used for classification and regression. The idea of K Nearest Neighbors classification is to best divide and separate the data based on clustering the data and to classify based on the proximity to it's K closest neighbors and their classifications. Where 'k' is the number of neighbors that are involved in the classification.
@@ -24,7 +27,7 @@ The k-nearest neighbors algorithm is a method used for classification and regres
 The linear regression is a way to model linear data and thereby be able to predict values (or 'labels' as they are called in machine learning) based on the features. The idea is that linear data can be approximated well with a 'best fitted' line.
 
   * `howItWorksLinearRegression.py` - The algorithm coded from scratch.
-  * `linearregression.pickle` - The trained data saved as a pickle file to save computing time. (see *regularLinearRegression.py*)
+  * `linearregression.pickle` - The trained data saved as a pickle file to save computing time. (see `regularLinearRegression.py`)
   * `regularLinearRegression.py` - The algorithm coded with Scikit-learn (python library for machine learning).
 
 ### **_softMarginSVMwithKernels_** 
