@@ -52,31 +52,69 @@ def neural_network_model(data):
     """
     # create dynamic layer weights and biases
     hl1_weights = tf.Variable(tf.random_normal([784, n_nodes_hl1]))
-    hl1_biases = tf.Variable(tf.random_normal(n_nodes_hl1))
-    hidden_1_layer = {'wgt': hl1_weights, 'bias': hl1_biases}
+    hl1_biases = tf.Variable(tf.random_normal(([n_nodes_hl1])))
+    hidden_1_layer = {'weight': hl1_weights, 'bias': hl1_biases}
 
     hl2_weights = tf.Variable(tf.random_normal([n_nodes_hl1, n_nodes_hl2]))
-    hl2_biases = tf.Variable(tf.random_normal(n_nodes_hl2))
-    hidden_2_layer = {'wgt': hl2_weights, 'bias': hl2_biases}
+    hl2_biases = tf.Variable(tf.random_normal([n_nodes_hl2]))
+    hidden_2_layer = {'weight': hl2_weights, 'bias': hl2_biases}
 
     hl3_weights = tf.Variable(tf.random_normal([n_nodes_hl2, n_nodes_hl3]))
-    hl3_biases = tf.Variable(tf.random_normal(n_nodes_hl3))
-    hidden_3_layer = {'wgt': hl3_weights, 'bias': hl3_biases}
+    hl3_biases = tf.Variable(tf.random_normal([n_nodes_hl3]))
+    hidden_3_layer = {'weight': hl3_weights, 'bias': hl3_biases}
 
     out_weights = tf.Variable(tf.random_normal([n_nodes_hl3, n_classes]))
-    out_biases = tf.Variable(tf.random_normal(n_classes))
-    output_layer = {'wgt': out_weights, 'bias': out_biases}
+    out_biases = tf.Variable(tf.random_normal([n_classes]))
+    output_layer = {'weight': out_weights, 'bias': out_biases}
 
     # create model {(input_data * weights) + biases} for each layer
-    l1 = tf.add(tf.matmul(data, hidden_1_layer['wgt']), hidden_1_layer['bias'])
+    l1 = tf.matmul(data, hidden_1_layer['weight'])
+    l1 = tf.add(l1, hidden_1_layer['bias'])
     l1 = tf.nn.relu(l1)
 
-    l2 = tf.add(tf.matmul(l1, hidden_2_layer['wgt']), hidden_2_layer['bias'])
+    l2 = tf.matmul(l1, hidden_2_layer['weight'])
+    l2 = tf.add(l2, hidden_2_layer['bias'])
     l2 = tf.nn.relu(l2)
 
-    l3 = tf.add(tf.matmul(l2, hidden_3_layer['wgt']), hidden_3_layer['bias'])
+    l3 = tf.matmul(l2, hidden_3_layer['weight'])
+    l3 = tf.add(l3, hidden_3_layer['bias'])
     l3 = tf.nn.relu(l3)
 
-    output = tf.add(tf.matmul(l3, output_layer['wgt']), output_layer['bias'])
+    out = tf.add(tf.matmul(l3, output_layer['weight']), output_layer['bias'])
 
-    return output
+    return out
+
+
+def train_neural_network(x):
+    """Function to train neural network..
+
+    Args:
+        x (tensor): input data
+    """
+    prediction = neural_network_model(x)
+    # cost Function
+    cost = tf.nn.softmax_cross_entropy_with_logits(logits=prediction, labels=y)
+    cost = tf.reduce_mean(cost)
+    # optimizing
+    optimizer = tf.train.AdamOptimizer().minimize(cost)
+    hm_epochs = 20
+    # start session
+    with tf.Session() as sess:
+        sess.run(tf.global_variables_initializer())
+        # training the network
+        for epoch in range(hm_epochs):
+            epoch_loss = 0
+            for _ in range(int(mnist.train.num_examples / batch_size)):
+                e_x, e_y = mnist.train.next_batch(batch_size)
+                _, c = sess.run([optimizer, cost], feed_dict={x: e_x, y: e_y})
+                epoch_loss += c
+            print('Epoch', epoch, 'completed out of',
+                  hm_epochs, 'loss:', epoch_loss)
+        # training finished
+        correct = tf.equal(tf.argmax(prediction, 1), tf.argmax(y, 1))
+        accuracy = tf.reduce_mean(tf.cast(correct, 'float'))
+        testimage = mnist.test.images
+        testlabel = mnist.test.labels
+        print("Accuracy:", accuracy.eval({x: testimage, y: testlabel}))
+
+train_neural_network(X)
