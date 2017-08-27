@@ -34,6 +34,13 @@ The linear regression is a way to model linear data and thereby be able to predi
   * `linearregression.pickle` - The trained data saved as a pickle file to save computing time. (see `regularLinearRegression.py`)
   * `regularLinearRegression.py` - The algorithm coded with Scikit-learn (python library for machine learning).
 
+### **_meanShift_** 
+Mean Shift is very similar to the K-Means algorithm (see folder **kMeans**), except for one very important factor: you do not need to specify the number of groups prior to training. The Mean Shift algorithm finds clusters on its own. For this reason, it is even more of an "unsupervised" machine learning algorithm than K-Means.
+
+  * `howItWorksMeanShift.py` - The algorithm coded *from scratch*.
+  * `regularMeanShift.py` - The algorithm coded with Scikit-learn (python library for machine learning).
+
+
 ### **_softMarginSVMwithKernels_** 
 Soft margin SVM is basically an SVM (see folder **supportVectorMachine**) which has some 'slack' and allows features to be 'wrongly' classified to avoid overfitting the classifier. This also includes kernels. Kernels use the inner product to help us transform the feature space to make it possible for Support Vector Machines to create a good hyperplane with non-linear feature sets.
 
