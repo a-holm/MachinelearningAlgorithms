@@ -33,12 +33,17 @@ Todo:
 import matplotlib.pyplot as plt
 from matplotlib import style
 import numpy as np
+import random
+from sklearn.datasets.samples_generator import make_blobs
 
 style.use('ggplot')
 colors = 10 * ["g", "r", "c", "b", "m", "y"]
-
-X = np.array([[1, 2], [1.5, 1.8], [5, 8], [8, 8],
-              [1, 0.6], [9, 11], [8, 2], [10, 2], [9, 3]])
+# Create test data
+# X = np.array([[1, 2], [1.5, 1.8], [5, 8], [8, 8],
+#               [1, 0.6], [9, 11], [8, 2], [10, 2], [9, 3]])
+centers = random.randrange(2, 5)
+X, y = make_blobs(n_samples=50, centers=centers, n_features=2)
+print(centers)
 
 
 class MeanShift:
