@@ -11,9 +11,12 @@ Folder names are **bolded** while filenames are `highlighted` for readability.
 ### **_deepLearningWithNeuralNetworks_** 
 Deep learning is part of a broader family of machine learning methods based on learning data representations, as opposed to task-specific algorithms. Learning can be supervised, partially supervised or unsupervised.
 
-A deep neural network (DNN) is an artificial neural network with multiple hidden layers between the input and output layers.
+A deep neural network (DNN) is an artificial neural network with multiple hidden layers between the input and output layers. The algorithm is coded with Tensorflow. Tensorflow allows us to perform specific machine learning number-crunching operations on tensors with large efficiency.
 
-  * `regularDeepLearningWithNeuralNetworks.py` - The algorithm coded with Tensorflow. Tensorflow allows us to perform specific machine learning number-crunching operations on tensors with large efficiency.
+  * `negative.txt` - file with negative sentiments from movie reviews.
+  * `ownDataDeepLearningWithNeuralNetworks.py` - Deep learning with TensorFlow on either positive or negative sentiments
+  * `positive.txt` - file with positive sentiments from movie reviews.
+  * `regularDeepLearningWithNeuralNetworks.py` - Deep learning with TensorFlow on data included in the tensorflow library.
 
 
 ### **_kMeans_** 
