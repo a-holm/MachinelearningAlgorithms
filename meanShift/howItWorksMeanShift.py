@@ -136,7 +136,12 @@ class MeanShift:
             self.classifications[classification].append(featureset)
 
         def predict(self, data):
-            pass
+            """Method to predict what cluster data belongs to."""
+            distances = [np.linalg.norm(featureset - self.centroids[centroid])
+                         for centroid in self.centroids]
+            classification = distances.index(min(distances))
+            return classification
+
 
 # Create MeanShift instance and fit data
 clf = MeanShift()
