@@ -17,7 +17,7 @@ All examples in this folder should be small enough to be reasonably assessed wit
 
   * `negative.txt` - file with negative sentiments from movie reviews.
   * `ownDataDeepLearningWithNeuralNetworks.py` - Deep learning with TensorFlow on either positive or negative sentiments with natural language processing (NLP) using the NLTK python library.
-  * `create_sentiment_featuresets.py` - using natural language processing we create a featureset that is suitably preprocessed for machine learning in the `ownDataDeepLearningWithNeuralNetworks.py` file. *This file must be ran before running the `ownDataDeepLearningWithNeuralNetworks.py` file.* 
+  * `create_sentiment_featuresets.py` - using natural language processing we create a featureset that is suitably preprocessed for machine learning in the `ownDataDeepLearningWithNeuralNetworks.py` file. **Warning:** *Will save a large pickle file if run directly, but will be called in the `ownDataDeepLearningWithNeuralNetworks.py` file*
   * `positive.txt` - file with positive sentiments from movie reviews.
   * `regularDeepLearningWithNeuralNetworks.py` - Deep learning with TensorFlow on data included in the tensorflow library.
 
