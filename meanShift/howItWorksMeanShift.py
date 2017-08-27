@@ -48,7 +48,7 @@ class MeanShift:
     or refitting (as it's also called) every time it is used.
     """
 
-    def __init__(self, bandwidth=4):
+    def __init__(self, bandwidth=None, radius_norm_step=100):
         """The __init__ method of the Mean Shift class.
 
         Could have added a tolerance or max iteration, but don't think it's
@@ -61,13 +61,20 @@ class MeanShift:
                 just read the doctype for the file.
         """
         self.bandwidth = bandwidth
+        self.radius_norm_step = radius_norm_step
 
     def fit(self, data):
         """Method to fit/train data and find clusters."""
+        if self.bandwidth is None:
+            all_data_centroid = np.average(data, axis=0)
+            all_data_norm = np.linalg.norm(all_data_centroid)
+            self.bandwidth = all_data_norm / self.radius_norm_step
+
         # find initial centroids which is each data point's location.
         centroids = {}
         for i in range(len(data)):
             centroids[i] = data[i]
+        weights = [i for i in range(self.radius_norm_step)][::-1]
 
         # optimize centroids
         while True:
@@ -77,13 +84,34 @@ class MeanShift:
                 centroid = centroids[i]
                 for featureset in data:
                     # check how far each datapoint is from current centroid.
-                    if np.linalg.norm(featureset - centroid) < self.bandwith:
-                        in_bandwidth.append(featureset)
+                    distance = np.linalg.norm(featureset - centroid)
+                    if distance == 0:
+                        distance = 0.000000001
+                    weight_index = int(distance / self.bandwidth)
+                    if weight_index > self.radius_norm_step - 1:
+                        weight_index = self.radius_norm_step - 1
+                    to_add = (weights[weight_index]**2) * [featureset]
+                    in_bandwidth += to_add
                 new_centroid = np.average(in_bandwidth, axis=0)
                 # make into tuple so I later can find unique arrays with set().
                 new_centroids.append(tuple(new_centroid))
             uniques = sorted(set(new_centroids))
-            # whittle down the centroids
+            # get rid of centroids that are close to eachother
+            to_pop = []
+            for i in uniques:
+                for ii in uniques:
+                    dist = np.linalg.norm(np.array(i) - np.array(ii))
+                    if i == ii:
+                        pass
+                    elif dist <= self.bandwidth:
+                        to_pop.append(ii)
+                        break
+            for i in to_pop:
+                try:
+                    uniques.remove(i)
+                except:
+                    pass
+            # further whittle down the centroids
             prev_centroids = dict(centroids)
             centroids = {}
             for i in range(len(uniques)):
@@ -98,6 +126,14 @@ class MeanShift:
             if optimized:
                 break
         self.centroids = centroids
+        self.classifications = {}
+        for i in range(len(self.centroids)):
+            self.classifications[i] = []
+        for featureset in data:
+            distances = [np.linalg.norm(featureset - self.centroids[centroid])
+                         for centroid in self.centroids]
+            classification = distances.index(min(distances))
+            self.classifications[classification].append(featureset)
 
         def predict(self, data):
             pass
@@ -107,7 +143,10 @@ clf = MeanShift()
 clf.fit(X)
 centroids = clf.centroids
 # Plot data
-plt.scatter(X[:, 0], X[:, 1], s=150)
+for classification in clf.classifications:
+    color = colors[classification]
+    for features in clf.classifications[classification]:
+        plt.scatter(features[0], features[1], marker='o', color=color, s=100)
 for c in centroids:
     plt.scatter(centroids[c][0], centroids[c][1], color='k', marker='x', s=150)
 plt.show()
