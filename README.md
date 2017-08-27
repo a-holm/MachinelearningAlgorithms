@@ -8,6 +8,14 @@ Folder names are **bolded** while filenames are `highlighted` for readability.
 
 ## FOLDER CONTENTS (in alphabetical order):
 
+### **_deepLearningWithNeuralNetworks_** 
+Deep learning is part of a broader family of machine learning methods based on learning data representations, as opposed to task-specific algorithms. Learning can be supervised, partially supervised or unsupervised.
+
+A deep neural network (DNN) is an artificial neural network with multiple hidden layers between the input and output layers.
+
+  * `regularDeepLearningWithNeuralNetworks.py` - The algorithm coded with Tensorflow. Tensorflow allows us to perform specific machine learning number-crunching operations on tensors with large efficiency.
+
+
 ### **_kMeans_** 
 K-means clustering is a unsupervised method to cluser or group the data. K-means allows you to choose the number (k) of categories/groups and categorizes it automatically when it has come up with solid categories.
 
