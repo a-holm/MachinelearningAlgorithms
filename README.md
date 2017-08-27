@@ -39,6 +39,9 @@ Mean Shift is very similar to the K-Means algorithm (see folder **kMeans**), exc
 
   * `howItWorksMeanShift.py` - The algorithm coded *from scratch*.
   * `regularMeanShift.py` - The algorithm coded with Scikit-learn (python library for machine learning).
+  * `titanic.xls` - Data that looks like a passager list on the Titanic.
+  * `titanicKMeans.py` - This is similar to `regularMeanShift.py`, but is more advanced and uses an imported titanic.xls file which contains non-numeric data so that I can how I would handle such data.
+
 
 
 ### **_softMarginSVMwithKernels_** 
