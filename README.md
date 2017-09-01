@@ -1,79 +1,100 @@
 # Machine learning and Artificial intelligence projects in Python
-Python examples of machine learning algorithms. All examples are shown by using conventional libraries for machine learning and by also building the algorithms from scratch.
-Each algorithm has it's own folder.
+###### Technologies involved: Python, Matplotlib, Numpy, SciPY
+
+Python examples of machine learning algorithms. Each algorithm has it's own folder and the plan is to eventually fill this repository of examples from every machine learning algorithm mentioned on Wikipedia.
 
 By making the algorithms from scratch I hope to show that I do not only know how to use the algorithms, but I also understand how it functions. By using conventional libraries for machine learning I hope to show that I can be effective and take advantage of the high-performance backend of libraries like for example, Scikit-learn and Tensorflow.
+
+##### EACH FOLDER HAS IT'S OWN `README.md` FILE WITH MORE INFORMATION
 
 Folder names are **bolded** while filenames are `highlighted` for readability.
 
 ## FOLDER CONTENTS (in alphabetical order):
 
-### **_deepLearningWithNeuralNetworks_** 
-Deep learning is part of a broader family of machine learning methods based on learning data representations, as opposed to task-specific algorithms. Learning can be supervised, partially supervised or unsupervised.
+### **_Association Rule Learning_** 
+Association rules are if/then statements that help uncover relationships between seemingly unrelated data in a relational database or other information repository. An example of an association rule would be "If a customer buys a dozen eggs, he is 80% likely to also purchase milk."
 
-A deep neural network (DNN) is an artificial neural network with multiple hidden layers between the input and output layers. The algorithm is coded with Tensorflow. Tensorflow allows us to perform specific machine learning number-crunching operations on tensors with large efficiency.
+  - **Apriori**: 
+    ###### (empty, will be updated soon)
+  - **Eclat**: 
+    ###### (empty, will be updated soon)
 
-All examples in this folder should be small enough to be reasonably assessed with the "only cpu" version of TensorFlow which was used when developing these examples.
+### **_Classification_** 
+Classification is the problem of identifying to which of a set of categories (sub-populations) a new observation belongs, on the basis of a training set of data containing observations (or instances) whose category membership is known. An example would be assigning a given email into "spam" or "non-spam" classes or assigning a diagnosis to a given patient as described by observed characteristics of the patient (gender, blood pressure, presence or absence of certain symptoms, etc.).
 
-  * `negative.txt` - file with negative sentiments from movie reviews.
-  * `ownDataDeepLearningWithNeuralNetworks.py` - Deep learning with TensorFlow on either positive or negative sentiments with natural language processing (NLP) using the NLTK python library.
-  * `create_sentiment_featuresets.py` - using natural language processing we create a featureset that is suitably preprocessed for machine learning in the `ownDataDeepLearningWithNeuralNetworks.py` file. **Warning:** *Will save a large pickle file if run directly, but will be called in the `ownDataDeepLearningWithNeuralNetworks.py` file*
-  * `positive.txt` - file with positive sentiments from movie reviews.
-  * `regularDeepLearningWithNeuralNetworks.py` - Deep learning with TensorFlow on data included in the tensorflow library.
+  - **DecisionTreeClassifiaction**: 
+    ###### (empty, will be updated soon)
+  - **KernelSVM**: 
+    Examples of the Kernel SVM algorithm.
+  - **K-NearestNeighbors**: 
+    Examples of the K nearest Neighbors algorithm.
+  - **LogisticRegression**: 
+    ###### (empty, will be updated soon)
+  - **NaiveBayes**: 
+    ###### (empty, will be updated soon)
+  - **RandomForestClassifiaction**: 
+    ###### (empty, will be updated soon)
+  - **SupportVectorMachine**: 
+    Examples of general Support Vector Machines.
 
+### **_Classification_** 
+Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense or another) to each other than to those in other groups (clusters). These algorithms are often used to research and explore the data to make more focused categorization later.
 
-### **_kMeans_** 
-K-means clustering is a unsupervised method to cluser or group the data. K-means allows you to choose the number (k) of categories/groups and categorizes it automatically when it has come up with solid categories.
+  - **HierarchicalClustering**: 
+    ###### (empty, will be updated soon)
+  - **K-MeansClustering**
+    Examples of K-Means Clustering
+  - **MeanShiftClustering**
+    Examples of Mean Shift Clustering.
 
-This algorithm and other unsupervised algorithms is usually used to research the data and finding structure so it is not expected to be super precise.
+### **_Deep Learning_** 
+Deep learning is the fastest-growing field in machine learning. It uses many-layered Deep Neural Networks (DNNs) to learn levels of representation and abstraction that make sense of data such as images, sound, and text.
 
-  * `howItWorksKMeans.py` - The algorithm coded *from scratch*.
-  * `regularKMeans.py` - The algorithm coded with Scikit-learn (python library for machine learning).
-  * `titanicKMeans.py` - This is similar to `regularKMeans.py`, but is more advanced and uses an imported titanic.xls file which contains non-numeric data so that I can how I would handle such data.
-  * `titanic.xls` - Data that looks like a passager list on the Titanic.
+  - **ArtificialNeuralNetworks**: 
+    ###### (empty, will be updated soon)
+  - **ConvolutionalNeuralNetworks**
+    ###### (empty, will be updated soon)
+  - **Deep Learning with TensorFlow**
+    Deep learning project with TensorFlow.
 
+### **_Dimensionality Reduction_** 
+In machine learning and statistics, dimensionality reduction or dimension reduction is the process of reducing the number of random variables under consideration.
 
-### **_kNearestNeighbors_** 
-The k-nearest neighbors algorithm is a method used for classification and regression. The idea of K Nearest Neighbors classification is to best divide and separate the data based on clustering the data and to classify based on the proximity to it's K closest neighbors and their classifications. Where 'k' is the number of neighbors that are involved in the classification.
+  - **KernelPCA**: 
+    ###### (empty, will be updated soon)
+  - **LinearDiscriminantAnalysis-LDA**
+    ###### (empty, will be updated soon)
+  - **PrincipalComponentAnalysis-PCA**
+    ###### (empty, will be updated soon)
 
-  * `breast-cancer-wisconsin.data` - Data used in the example.
-  * `breast-cancer-wisconsin.names` - Information about the data used in the example.
-  * `howItWorksKNearestNeighbors.py` - The algorithm coded *from scratch*.
-  * `regularNearestNeighbors.py` - The algorithm coded with Scikit-learn (python library for machine learning).
+### **_Model Selection Boosting_** 
+This folder include Model Selection and Boosting. Model selection is the task of selecting a statistical model from a set of candidate models, given data. In the simplest cases, a pre-existing set of data is considered. Boosting is a machine learning meta-algorithm for primarily reducing bias and variance.
 
-### **_linearRegression_** 
-The linear regression is a way to model linear data and thereby be able to predict values (or 'labels' as they are called in machine learning) based on the features. The idea is that linear data can be approximated well with a 'best fitted' line.
+  - **GradientBoostingWithXGBoost**: 
+    ###### (empty, will be updated soon)
+  - **ModelSelection**
+    ###### (empty, will be updated soon)
 
-  * `howItWorksLinearRegression.py` - The algorithm coded *from scratch*.
-  * `linearregression.pickle` - The trained data saved as a pickle file to save computing time. (see `regularLinearRegression.py`)
-  * `regularLinearRegression.py` - The algorithm coded with Scikit-learn (python library for machine learning).
+### **_Regression_** 
+regression analysis is a set of statistical processes for estimating the relationships among variables.
 
-### **_meanShift_** 
-Mean Shift is very similar to the K-Means algorithm (see folder **kMeans**), except for one very important factor: you do not need to specify the number of groups prior to training. The Mean Shift algorithm finds clusters on its own. For this reason, it is even more of an "unsupervised" machine learning algorithm than K-Means.
+  - **DecisionTreeRegression**: 
+    ###### (empty, will be updated soon)
+  - **MultipleLinearRegression**: 
+    ###### (empty, will be updated soon)
+  - **PolynomialRegression**: 
+    ###### (empty, will be updated soon)
+  - **RandomForestRegression**: 
+    ###### (empty, will be updated soon)
+  - **SimpleLinearRegression**: 
+    Examples of Simple Linear Regression.
+  - **SupportVectorRegression**: 
+    ###### (empty, will be updated soon)
 
-  * `howItWorksMeanShift.py` - The algorithm coded *from scratch*.
-  * `regularMeanShift.py` - The algorithm coded with Scikit-learn (python library for machine learning).
-  * `titanic.xls` - Data that looks like a passager list on the Titanic.
-  * `titanicKMeans.py` - This is similar to `regularMeanShift.py`, but is more advanced and uses an imported titanic.xls file which contains non-numeric data so that I can how I would handle such data.
+### **_Reinforcement Learning_** 
+Reinforcement learning (RL) is an area of machine learning inspired by behaviorist psychology, concerned with how software agents ought to take actions in an environment so as to maximize some notion of cumulative reward.
 
-
-
-### **_softMarginSVMwithKernels_** 
-Soft margin SVM is basically an SVM (see folder **supportVectorMachine**) which has some 'slack' and allows features to be 'wrongly' classified to avoid overfitting the classifier. This also includes kernels. Kernels use the inner product to help us transform the feature space to make it possible for Support Vector Machines to create a good hyperplane with non-linear feature sets.
-
-I also added methods to check and predict non-linear data.
-
-  * `breast-cancer-wisconsin.data` - Data used in the example.
-  * `howItWorksSoftMarginSVM.py` - The algorithm coded *from scratch*. This can basically do the same as the "*from scratch*" algorithm in folder **supportVectorMachine**, but this is much more complex to account for margins and more dimensions involved.
-  * `regularSoftMarginSVM.py` - The algorithm coded with Scikit-learn (python library for machine learning).
-
-
-### **_supportVectorMachine_** 
-Support vector machines (SVMs) are supervised learning models with associated learning algorithms that analyze data used for classification and regression analysis. The objective of the SVM is to find the best separating hyperplane in vector space which is also referred to as the decision boundary.
-
-The algorithm coded from scratch is a bare-bones and simple implementation to mainly show the thinking clearly without adding a lot of other elements. This algorithm can only take linearly separable data that does not overlap. For a more advanced implementation with overlapping and non-linear data see the folder **softMarginSVMwithKernels**.
-
-  * `breast-cancer-wisconsin.data` - Data used in the example.
-  * `howItWorksSupportVectorMachine.py` - The algorithm coded *from scratch*.
-  * `regularSupportVectorMachine.py` - The algorithm coded with Scikit-learn (python library for machine learning).
-
+  - **ThompsonSampling**: 
+    ###### (empty, will be updated soon)
+  - **UpperConfidenceBound**
+    ###### (empty, will be updated soon)
