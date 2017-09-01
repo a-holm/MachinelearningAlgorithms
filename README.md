@@ -40,6 +40,13 @@ Cluster analysis or clustering is the task of grouping a set of objects in such 
   - **[MeanShiftClustering](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Clustering/MeanShiftClustering)**:
      Examples of Mean Shift Clustering.
 
+### **_[DataPreprocessing](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/DataPreprocessing)_** 
+Contains a Python and R template for pre-processing machine learning data.
+
+  - **data**: Just sample data for testing.
+  - `dataPreprocessingTemplate.py`: Python template for preprocessing.
+  - `dataPreprocessingTemplate.r`: R template for preprocessing.
+
 ### **_[Deep Learning](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Deep%20Learning)_** 
 Deep learning is the fastest-growing field in machine learning. It uses many-layered Deep Neural Networks (DNNs) to learn levels of representation and abstraction that make sense of data such as images, sound, and text.
 
