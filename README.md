@@ -1,7 +1,7 @@
-# Machine learning and Artificial intelligence projects in Python
-###### Technologies involved: Python, Matplotlib, Numpy, SciPY
+# Machine learning and Artificial intelligence projects in Python and R
+###### Technologies involved: Python, R, Matplotlib, Numpy, SciPY, Skikit-learn, TensorFlow
 
-Python examples of machine learning algorithms. Each algorithm has it's own folder and the plan is to eventually fill this repository of examples from every machine learning algorithm mentioned on Wikipedia.
+Examples of machine learning algorithms and applied machine learning. Each algorithm has it's own folder and the plan is to eventually fill this repository of examples from every machine learning algorithm mentioned on Wikipedia.
 
 By making the algorithms from scratch I hope to show that I do not only know how to use the algorithms, but I also understand how it functions. By using conventional libraries for machine learning I hope to show that I can be effective and take advantage of the high-performance backend of libraries like for example, Scikit-learn and Tensorflow.
 
@@ -17,35 +17,35 @@ Association rules are if/then statements that help uncover relationships between
   - **Apriori**:  `(empty, will be updated soon)`
   - **Eclat**:  `(empty, will be updated soon)`
 
-### **_Classification_** 
+### **_[Classification](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Classification)_** 
 Classification is the problem of identifying to which of a set of categories (sub-populations) a new observation belongs, on the basis of a training set of data containing observations (or instances) whose category membership is known. An example would be assigning a given email into "spam" or "non-spam" classes or assigning a diagnosis to a given patient as described by observed characteristics of the patient (gender, blood pressure, presence or absence of certain symptoms, etc.).
 
   - **DecisionTreeClassifiaction**:  `(empty, will be updated soon)`
-  - **KernelSVM**: 
+  - **[KernelSVM](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Classification/KernelSVM)**: 
      Examples of the Kernel SVM algorithm.
-  - **K-NearestNeighbors**: 
+  - **[K-NearestNeighbors](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Classification/K-NearestNeighbors)**: 
      Examples of the K nearest Neighbors algorithm.
   - **LogisticRegression**:  `(empty, will be updated soon)`
   - **NaiveBayes**:  `(empty, will be updated soon)`
   - **RandomForestClassifiaction**:  `(empty, will be updated soon)`
-  - **SupportVectorMachine**: 
+  - **[SupportVectorMachine](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Classification/SupportVectorMachine)**: 
      Examples of general Support Vector Machines.
 
-### **_Classification_** 
+### **_[Clustering](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Clustering)_** 
 Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense or another) to each other than to those in other groups (clusters). These algorithms are often used to research and explore the data to make more focused categorization later.
 
   - **HierarchicalClustering**:  `(empty, will be updated soon)`
-  - **K-MeansClustering**:
+  - **[K-MeansClustering](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Clustering/K-MeansClustering)**:
      Examples of K-Means Clustering
-  - **MeanShiftClustering**:
+  - **[MeanShiftClustering](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Clustering/MeanShiftClustering)**:
      Examples of Mean Shift Clustering.
 
-### **_Deep Learning_** 
+### **_[Deep Learning](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Deep%20Learning)_** 
 Deep learning is the fastest-growing field in machine learning. It uses many-layered Deep Neural Networks (DNNs) to learn levels of representation and abstraction that make sense of data such as images, sound, and text.
 
   - **ArtificialNeuralNetworks**:  `(empty, will be updated soon)`
   - **ConvolutionalNeuralNetworks**: `(empty, will be updated soon)`
-  - **Deep Learning with TensorFlow**:
+  - **[DeepLearningWithTensorFlow](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Deep%20Learning/DeepLearningWithTensorFlow)**:
      Deep learning project with TensorFlow.
 
 ### **_Dimensionality Reduction_** 
@@ -61,14 +61,14 @@ This folder include Model Selection and Boosting. Model selection is the task of
   - **GradientBoostingWithXGBoost**:  `(empty, will be updated soon)`
   - **ModelSelection**: `(empty, will be updated soon)`
 
-### **_Regression_** 
+### **_[Regression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression)_** 
 regression analysis is a set of statistical processes for estimating the relationships among variables.
 
   - **DecisionTreeRegression**:  `(empty, will be updated soon)`
   - **MultipleLinearRegression**:  `(empty, will be updated soon)`
   - **PolynomialRegression**:  `(empty, will be updated soon)`
   - **RandomForestRegression**:  `(empty, will be updated soon)`
-  - **SimpleLinearRegression**: 
+  - **[SimpleLinearRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression/SimpleLinearRegression)**: 
     Examples of Simple Linear Regression.
   - **SupportVectorRegression**:  `(empty, will be updated soon)`
 
