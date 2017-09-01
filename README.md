@@ -25,9 +25,9 @@ Classification is the problem of identifying to which of a set of categories (su
   - **DecisionTreeClassifiaction**: 
     ###### (empty, will be updated soon)
   - **KernelSVM**: 
-    Examples of the Kernel SVM algorithm.
+     Examples of the Kernel SVM algorithm.
   - **K-NearestNeighbors**: 
-    Examples of the K nearest Neighbors algorithm.
+     Examples of the K nearest Neighbors algorithm.
   - **LogisticRegression**: 
     ###### (empty, will be updated soon)
   - **NaiveBayes**: 
@@ -35,36 +35,36 @@ Classification is the problem of identifying to which of a set of categories (su
   - **RandomForestClassifiaction**: 
     ###### (empty, will be updated soon)
   - **SupportVectorMachine**: 
-    Examples of general Support Vector Machines.
+     Examples of general Support Vector Machines.
 
 ### **_Classification_** 
 Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense or another) to each other than to those in other groups (clusters). These algorithms are often used to research and explore the data to make more focused categorization later.
 
   - **HierarchicalClustering**: 
     ###### (empty, will be updated soon)
-  - **K-MeansClustering**
-    Examples of K-Means Clustering
-  - **MeanShiftClustering**
-    Examples of Mean Shift Clustering.
+  - **K-MeansClustering**:
+     Examples of K-Means Clustering
+  - **MeanShiftClustering**:
+     Examples of Mean Shift Clustering.
 
 ### **_Deep Learning_** 
 Deep learning is the fastest-growing field in machine learning. It uses many-layered Deep Neural Networks (DNNs) to learn levels of representation and abstraction that make sense of data such as images, sound, and text.
 
   - **ArtificialNeuralNetworks**: 
     ###### (empty, will be updated soon)
-  - **ConvolutionalNeuralNetworks**
+  - **ConvolutionalNeuralNetworks**:
     ###### (empty, will be updated soon)
-  - **Deep Learning with TensorFlow**
-    Deep learning project with TensorFlow.
+  - **Deep Learning with TensorFlow**:
+     Deep learning project with TensorFlow.
 
 ### **_Dimensionality Reduction_** 
 In machine learning and statistics, dimensionality reduction or dimension reduction is the process of reducing the number of random variables under consideration.
 
   - **KernelPCA**: 
     ###### (empty, will be updated soon)
-  - **LinearDiscriminantAnalysis-LDA**
+  - **LinearDiscriminantAnalysis-LDA**:
     ###### (empty, will be updated soon)
-  - **PrincipalComponentAnalysis-PCA**
+  - **PrincipalComponentAnalysis-PCA**:
     ###### (empty, will be updated soon)
 
 ### **_Model Selection Boosting_** 
@@ -72,7 +72,7 @@ This folder include Model Selection and Boosting. Model selection is the task of
 
   - **GradientBoostingWithXGBoost**: 
     ###### (empty, will be updated soon)
-  - **ModelSelection**
+  - **ModelSelection**:
     ###### (empty, will be updated soon)
 
 ### **_Regression_** 
@@ -96,5 +96,5 @@ Reinforcement learning (RL) is an area of machine learning inspired by behaviori
 
   - **ThompsonSampling**: 
     ###### (empty, will be updated soon)
-  - **UpperConfidenceBound**
+  - **UpperConfidenceBound**:
     ###### (empty, will be updated soon)
