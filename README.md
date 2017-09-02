@@ -81,6 +81,7 @@ regression analysis is a set of statistical processes for estimating the relatio
   - **[SimpleLinearRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression/SimpleLinearRegression)**: 
     Examples of Simple Linear Regression. **`(Includes algorithm from scratch)`**
   - **SupportVectorRegression**:  `(empty, will be updated soon)`
+  - `regressionTemplate.py` This is a template file for regressions
 
 ### **_Reinforcement Learning_** 
 Reinforcement learning (RL) is an area of machine learning inspired by behaviorist psychology, concerned with how software agents ought to take actions in an environment so as to maximize some notion of cumulative reward.
