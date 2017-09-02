@@ -72,7 +72,7 @@ This folder include Model Selection and Boosting. Model selection is the task of
 regression analysis is a set of statistical processes for estimating the relationships among variables.
 
   - **DecisionTreeRegression**:  `(empty, will be updated soon)`
-  - **MultipleLinearRegression**:  `(empty, will be updated soon)`
+  - **[MultipleLinearRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression/MultipleLinearRegression)**:  Examples of Multiple Linear Regression. 
   - **PolynomialRegression**:  `(empty, will be updated soon)`
   - **RandomForestRegression**:  `(empty, will be updated soon)`
   - **[SimpleLinearRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression/SimpleLinearRegression)**: 
