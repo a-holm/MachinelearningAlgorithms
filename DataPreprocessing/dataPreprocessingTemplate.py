@@ -59,18 +59,18 @@ onehotencoder = OneHotEncoder(categorical_features=[0])
 features = onehotencoder.fit_transform(features).toarray()
 labelEncoder_y = LabelEncoder()
 labels = labelEncoder_y.fit_transform(labels)  # no need for more because label
-print(labels)"""
-
+print(labels)
+"""
 
 # Splitting the Dataset into a Training set and a Test set
 feature_train, feature_test, label_train, label_test = train_test_split(
     features, labels, test_size=0.2)
 
 
-"""# Feature scaling, normalize scale is important. Especially on algorithms
+# Feature scaling, normalize scale is important. Especially on algorithms
 # involving euclidian distance. Two main feature scaling formulas are:
 # Standardisation: x_stand = (x-mean(x))/(standard_deviation(x))
 # Normalisation: x_norm = (x-min(x))/(max(x)-min(x))
-sc_feature = StandardScaler()
+"""sc_feature = StandardScaler()
 feature_train = sc_feature.fit_transform(feature_train)
 feature_test = sc_feature.transform(feature_test)"""

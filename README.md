@@ -22,23 +22,23 @@ Classification is the problem of identifying to which of a set of categories (su
 
   - **DecisionTreeClassifiaction**:  `(empty, will be updated soon)`
   - **[KernelSVM](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Classification/KernelSVM)**: 
-     Examples of the Kernel SVM algorithm.
+     Examples of the Kernel SVM algorithm. **`(Includes algorithm from scratch)`**
   - **[K-NearestNeighbors](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Classification/K-NearestNeighbors)**: 
-     Examples of the K nearest Neighbors algorithm.
+     Examples of the K nearest Neighbors algorithm. **`(Includes algorithm from scratch)`**
   - **LogisticRegression**:  `(empty, will be updated soon)`
   - **NaiveBayes**:  `(empty, will be updated soon)`
   - **RandomForestClassifiaction**:  `(empty, will be updated soon)`
   - **[SupportVectorMachine](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Classification/SupportVectorMachine)**: 
-     Examples of general Support Vector Machines.
+     Examples of general Support Vector Machines. **`(Includes algorithm from scratch)`**
 
 ### **_[Clustering](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Clustering)_** 
 Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense or another) to each other than to those in other groups (clusters). These algorithms are often used to research and explore the data to make more focused categorization later.
 
   - **HierarchicalClustering**:  `(empty, will be updated soon)`
   - **[K-MeansClustering](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Clustering/K-MeansClustering)**:
-     Examples of K-Means Clustering
+     Examples of K-Means Clustering. **`(Includes algorithm from scratch)`**
   - **[MeanShiftClustering](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Clustering/MeanShiftClustering)**:
-     Examples of Mean Shift Clustering.
+     Examples of Mean Shift Clustering. **`(Includes algorithm from scratch)`**
 
 ### **_[DataPreprocessing](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/DataPreprocessing)_** 
 Contains a Python and R template for pre-processing machine learning data.
@@ -76,7 +76,7 @@ regression analysis is a set of statistical processes for estimating the relatio
   - **PolynomialRegression**:  `(empty, will be updated soon)`
   - **RandomForestRegression**:  `(empty, will be updated soon)`
   - **[SimpleLinearRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression/SimpleLinearRegression)**: 
-    Examples of Simple Linear Regression.
+    Examples of Simple Linear Regression. **`(Includes algorithm from scratch)`**
   - **SupportVectorRegression**:  `(empty, will be updated soon)`
 
 ### **_Reinforcement Learning_** 

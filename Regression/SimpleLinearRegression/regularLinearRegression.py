@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
-"""Linear regression for machine learning.
+"""Simple linear regression for machine learning.
 
 This file demonstrate knowledge of linear regression. By using
 conventional libraries.The idea of linear
 regression is to take continuous data and find the best fit of it to a line.
+
+Simple linear regression just refers to the fact that the features only
+includes one column. So the label is composed by just one variable and one
+constant.
 
 Example:
 
