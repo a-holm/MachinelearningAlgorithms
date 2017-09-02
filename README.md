@@ -5,6 +5,8 @@ Examples of machine learning algorithms and applied machine learning. Each algor
 
 By making the algorithms from scratch I hope to show that I do not only know how to use the algorithms, but I also understand how it functions. By using conventional libraries for machine learning I hope to show that I can be effective and take advantage of the high-performance backend of libraries like for example, Scikit-learn and Tensorflow.
 
+I will refer to independent variables (also just called X) as 'features' and I will refer to the dependent variables (also just called y) as 'labels' due to convention.
+
 ##### EACH FOLDER HAS IT'S OWN `README.md` FILE WITH MORE INFORMATION
 
 Folder names are **bolded** while filenames and warnings are `highlighted` for readability.
@@ -73,7 +75,8 @@ regression analysis is a set of statistical processes for estimating the relatio
 
   - **DecisionTreeRegression**:  `(empty, will be updated soon)`
   - **[MultipleLinearRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression/MultipleLinearRegression)**:  Examples of Multiple Linear Regression. 
-  - **PolynomialRegression**:  `(empty, will be updated soon)`
+  - **[PolynomialRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression/PolynomialRegression)**:
+  Examples of Polynomial Regression. 
   - **RandomForestRegression**:  `(empty, will be updated soon)`
   - **[SimpleLinearRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression/SimpleLinearRegression)**: 
     Examples of Simple Linear Regression. **`(Includes algorithm from scratch)`**
