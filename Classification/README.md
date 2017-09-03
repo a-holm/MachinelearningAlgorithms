@@ -7,6 +7,12 @@ Folder names are **bolded** while filenames are `highlighted` for readability.
 
 ## FOLDER CONTENTS (in alphabetical order):
 
+
+  - `classificationTemplate.py` This is a template file for classifications in Python.
+  - `classificationTemplate.r` This is a template file for classifications in R.
+  - `requirements.txt` Python requirements to run all files in the classification folder.
+
+
 ### **_DecisionTreeClassification_**
 Currently empty, check back soon for updates.
 
