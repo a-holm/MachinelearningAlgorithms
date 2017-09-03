@@ -8,7 +8,13 @@ Folder names are **bolded** while filenames are `highlighted` for readability.
 ## FOLDER CONTENTS (in alphabetical order):
 
 ### **_DecisionTreeRegression_**
-Currently empty, check back soon for updates.
+Decision tree builds regression or classification models in the form of a tree structure. It brakes down a dataset into smaller and smaller subsets while at the same time an associated decision tree is incrementally developed. The final result is a tree with decision nodes and leaf nodes. 
+
+  * `Position_Salaries.csv` - Data used in `regularDecisionTreeRegression.py` and `regularDecisionTreeRegression.r`.
+  * `regularDecisionTreeRegression.py` - Decision Tree Regression in Python.
+  * `regularDecisionTreeRegression.r` - Decision Tree Regression in R.
+
+
 
 ### **_MultipleLinearRegression_**
 A linear regression model that contains more than one predictor variable is called a multiple linear regression model. It is basically the same as Simple Linear regression, but with more predictor variables (features). The idea is that linearly related predictor variables can approximate the labels with a 'best fitted' hyperplane or surface. The model assumes:

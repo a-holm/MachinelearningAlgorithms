@@ -73,7 +73,7 @@ This folder include Model Selection and Boosting. Model selection is the task of
 ### **_[Regression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression)_** 
 regression analysis is a set of statistical processes for estimating the relationships among variables.
 
-  - **DecisionTreeRegression**:  `(empty, will be updated soon)`
+  - **[DecisionTreeRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression/DecisionTreeRegression)**:  Examples of Decision Tree Regression.
   - **[MultipleLinearRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression/MultipleLinearRegression)**:  Examples of Multiple Linear Regression. 
   - **[PolynomialRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression/PolynomialRegression)**:
   Examples of Polynomial Regression. 
