@@ -27,7 +27,7 @@ Classification is the problem of identifying to which of a set of categories (su
      Examples of the Kernel SVM algorithm. **`(Includes algorithm from scratch)`**
   - **[K-NearestNeighbors](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Classification/K-NearestNeighbors)**: 
      Examples of the K nearest Neighbors algorithm. **`(Includes algorithm from scratch)`**
-  - **LogisticRegression**:  `(empty, will be updated soon)`
+  - **[LogisticRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Classification/K-NearestNeighbors)**:  Examples of Logistic regression.
   - **NaiveBayes**:  `(empty, will be updated soon)`
   - **RandomForestClassifiaction**:  `(empty, will be updated soon)`
   - **[SupportVectorMachine](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Classification/SupportVectorMachine)**: 
