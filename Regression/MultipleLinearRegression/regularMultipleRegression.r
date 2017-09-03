@@ -26,9 +26,11 @@ test_set = subset(dataset, split==FALSE)
 
 # Fit the training set with the mutliple linear regression model
 regressor = lm(formula = Profit ~ ., data = training_set)
-summary(regressor)
-# And from it we can see
-regressor = lm(formula = Profit ~ R.D.Spend, data = training_set)
+# summary(regressor)
 
 # Predict Test set results
 label_pred = predict(regressor, newdata = test_set)
+
+# Building the optimal model using the Backward Elimenation method
+regressor = lm(formula = Profit ~ R.D.Spend+Marketing.Spend, data = training_set)
+summary(regressor)
