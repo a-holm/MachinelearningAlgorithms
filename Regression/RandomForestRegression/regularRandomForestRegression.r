@@ -7,6 +7,7 @@
 # In the same way in the random forest classifier, the higher the number of trees
 # in the forest gives the high accuracy results.
 # Importing the data set
+
 dataset = read.csv('Position_Salaries.csv')
 dataset = dataset[2:3]
 
