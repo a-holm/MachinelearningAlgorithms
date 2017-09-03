@@ -23,7 +23,11 @@ feature_train, feature_test, label_train, label_test = train_test_split(
 # Normalisation: x_norm = (x-min(x))/(max(x)-min(x))
 """sc_feature = StandardScaler()
 feature_train = sc_feature.fit_transform(feature_train)
-feature_test = sc_feature.transform(feature_test)"""
+feature_test = sc_feature.transform(feature_test)
+sc_labels = StandardScaler()
+labels_train = sc_labels.fit_transform(labels_train)
+labels_test = sc_labels.transform(labels_test)
+"""
 
 # Fit the regression model to the dataset
 # Create regressor here
