@@ -6,6 +6,6 @@ A linear regression model that contains more than one predictor variable is call
   4. Independence of errors
   5. Lack of multicollinearity
 
-  * `50_Startups.csv` - Multiple Linear Regression
+  * `50_Startups.csv` - Data used in `regularMultipleRegression.py` and `regularMultipleRegression.r`.
   * `regularMultipleRegression.py` - Multiple Linear Regression in Python.
   * `regularMultipleRegression.r` - Multiple Linear Regression in R.
