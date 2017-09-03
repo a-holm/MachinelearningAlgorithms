@@ -1,5 +1,15 @@
 # -*- coding: utf-8 -*-
-"""Classification template for machine learning."""
+"""Classification template for machine learning.
+
+(features).
+
+Example:
+
+        $ python regularLogisticRegression.py
+
+Todo:
+    *
+"""
 
 import numpy as np
 import matplotlib.pyplot as plt
