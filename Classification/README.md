@@ -28,15 +28,22 @@ I also added methods to check and predict non-linear data.
 ### **_K-NearestNeighbors_** 
 The K-nearest neighbors algorithm is a method used for classification and regression. The idea of K Nearest Neighbors classification is to best divide and separate the data based on clustering the data and to classify based on the proximity to it's K closest neighbors and their classifications. Where 'k' is the number of neighbors that are involved in the classification.
 
-  * `breast-cancer-wisconsin.data` - Data used in the example.
+  * `breast-cancer-wisconsin.data` - Data used in the example  `regularNearestNeighbors.py`.
   * `breast-cancer-wisconsin.names` - Information about the data used in the example.
   * `howItWorksKNearestNeighbors.py` - The algorithm coded *from scratch*.
   * `regularNearestNeighbors.py` - The algorithm coded with Scikit-learn (python library for machine learning).
+  * `regularNearestNeighbors2.py` - The algorithm written in Python with the classification template.
+  * `regularNearestNeighbors.r` - The algorithm written in R.
+  * `Social_Network_Ads` - The Data used in the examples `regularNearestNeighbors2.py` and `regularNearestNeighbors.r`.
 
 ### **_LogisticRegression_**
 In statistics, logistic regression, or logit regression, or logit model is a regression model where the dependent variable (DV) is categorical. This project covers the case of a binary dependent variable—that is, where it can take only two values, "0" and "1", which represent outcomes such as pass/fail, win/lose, alive/dead or healthy/sick. 
 
 The binary Logistic regression model is an example of a qualitative response/discrete choice model. It is used to estimate the probability of a binary response based on one or more predictor (or independent) variables (features).
+
+  * `regularLogisticRegression.py` - The Algorithm written in Python.
+  * `regularLogisticRegression.r` - The Algorithm written in R.
+  * `Social_Network_Ads` - The Data used in the examples.
 
 ### **_NaiveBayes_**
 Currently empty, check back soon for updates.
