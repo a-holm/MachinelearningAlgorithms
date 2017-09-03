@@ -1,14 +1,8 @@
-### **_SimpleLinearRegression_**
-The linear regression is a way to model linear data and thereby be able to predict values (or 'labels' as they are called in machine learning) based on the predictor variables (features). The idea is that linear data can be approximated well with a 'best fitted' line. The model assumes:
-  1. Linearity
-  2. Homoscedasticity
-  3. Multivariate normality
-  4. Independence of errors
-  5. Lack of multicollinearity
+### **_RandomForestRegression_**
+Random forest algorithm is a supervised classification algorithm. As the name suggest, this algorithm creates the forest with a number of decision trees.
 
-  * `howItWorksLinearRegression.py` - The algorithm coded *from scratch*.
-  * `linearregression.pickle` - The trained data saved as a pickle file to save computing time. (see `regularLinearRegression.py`)
-  * `regularLinearRegression.py` - The algorithm coded with Scikit-learn (python library for machine learning).
-  * `regularLinearRegression.r` - Simple linear regression in R.
-  * `regularLinearRegression2.py` - Different variation of it using my new data preprocessing template.
-  * `Salary_Data.csv` - Data used in `regularLinearRegression2.py` and `regularLinearRegression.r`.
+In general, the more trees in the forest the more robust the forest looks like. In the same way in the random forest classifier, the higher the number of trees in the forest gives the high accuracy results.
+
+  * `Position_Salaries.csv` - Data used in `regularRandomForestRegression.py` and `regularRandomForestRegression.r`.
+  * `regularRandomForestRegression.py` - Random Forest Regression in Python.
+  * `regularRandomForestRegression.r` - Random Forest Regression in R.

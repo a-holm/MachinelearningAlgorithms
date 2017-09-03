@@ -15,7 +15,6 @@ Decision tree builds regression or classification models in the form of a tree s
   * `regularDecisionTreeRegression.r` - Decision Tree Regression in R.
 
 
-
 ### **_MultipleLinearRegression_**
 A linear regression model that contains more than one predictor variable is called a multiple linear regression model. It is basically the same as Simple Linear regression, but with more predictor variables (features). The idea is that linearly related predictor variables can approximate the labels with a 'best fitted' hyperplane or surface. The model assumes:
   1. Linearity
@@ -28,6 +27,7 @@ A linear regression model that contains more than one predictor variable is call
   * `regularMultipleRegression.py` - Multiple Linear Regression in Python.
   * `regularMultipleRegression.r` - Multiple Linear Regression in R.
 
+
 ### **_PolynomialRegression_**
 polynomial regression is a form of regression analysis in which the relationship between the independent variable x and the dependent variable y is modelled as an nth degree polynomial in x. Polynomial regression fits a nonlinear relationship between the value of x and the corresponding conditional mean of y, denoted E(y |x)Although polynomial regression fits a nonlinear model to the data, as a statistical estimation problem it is linear, in the sense that the regression function E(y | x) is linear in the unknown parameters that are estimated from the data. For this reason, polynomial regression is considered to be a special case of multiple linear regression.
 
@@ -35,8 +35,16 @@ polynomial regression is a form of regression analysis in which the relationship
   * `regularPolynomialRegression.py` - Polynomial Regression in Python.
   * `regularPolynomialRegression.r` - Polynomial Regression in R.
 
+
 ### **_RandomForestRegression_**
-Currently empty, check back soon for updates.
+Random forest algorithm is a supervised classification algorithm. As the name suggest, this algorithm creates the forest with a number of decision trees.
+
+In general, the more trees in the forest the more robust the forest looks like. In the same way in the random forest classifier, the higher the number of trees in the forest gives the high accuracy results.
+
+  * `Position_Salaries.csv` - Data used in `regularRandomForestRegression.py` and `regularRandomForestRegression.r`.
+  * `regularRandomForestRegression.py` - Random Forest Regression in Python.
+  * `regularRandomForestRegression.r` - Random Forest Regression in R.
+
 
 ### **_SimpleLinearRegression_**
 The linear regression is a way to model linear data and thereby be able to predict values (or 'labels' as they are called in machine learning) based on the predictor variables (features). The idea is that linear data can be approximated well with a 'best fitted' line. The model assumes:

@@ -77,7 +77,7 @@ regression analysis is a set of statistical processes for estimating the relatio
   - **[MultipleLinearRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression/MultipleLinearRegression)**:  Examples of Multiple Linear Regression. 
   - **[PolynomialRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression/PolynomialRegression)**:
   Examples of Polynomial Regression. 
-  - **RandomForestRegression**:  `(empty, will be updated soon)`
+  - **[RandomForestRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression/RandomForestRegression)**:  Examples of Random Forest Regression. 
   - **[SimpleLinearRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression/SimpleLinearRegression)**: 
     Examples of Simple Linear Regression. **`(Includes algorithm from scratch)`**
   - **[SupportVectorRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression/SupportVectorRegression)**:  Examples of Support Vector regression.
