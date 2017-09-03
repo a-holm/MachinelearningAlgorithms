@@ -7,6 +7,12 @@ Folder names are **bolded** while filenames are `highlighted` for readability.
 
 ## FOLDER CONTENTS (in alphabetical order):
 
+Files:
+
+  - `regressionTemplate.py` This is a template file for regressions in Python.
+  - `regressionTemplate.r` This is a template file for regressions in R.
+  - `requirements.txt` Python requirements to run all files in the regression folder.
+
 ### **_DecisionTreeRegression_**
 Decision tree builds regression or classification models in the form of a tree structure. It brakes down a dataset into smaller and smaller subsets while at the same time an associated decision tree is incrementally developed. The final result is a tree with decision nodes and leaf nodes. 
 
