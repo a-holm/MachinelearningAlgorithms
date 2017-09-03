@@ -5,7 +5,7 @@
 
 Example:
 
-        $ python regularLogisticRegression.py
+        $ python regularClassificationRegression.py
 
 Todo:
     *
