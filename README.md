@@ -80,7 +80,7 @@ regression analysis is a set of statistical processes for estimating the relatio
   - **RandomForestRegression**:  `(empty, will be updated soon)`
   - **[SimpleLinearRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression/SimpleLinearRegression)**: 
     Examples of Simple Linear Regression. **`(Includes algorithm from scratch)`**
-  - **SupportVectorRegression**:  `(empty, will be updated soon)`
+  - **[SupportVectorRegression](https://github.com/a-holm/MachinelearningAlgorithms/tree/master/Regression/SupportVectorRegression)**:  Examples of Support Vector regression.
   - `regressionTemplate.py` This is a template file for regressions in Python.
   - `regressionTemplate.r` This is a template file for regressions in R.
 

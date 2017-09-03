@@ -1,14 +1,17 @@
-### **_SimpleLinearRegression_**
-The linear regression is a way to model linear data and thereby be able to predict values (or 'labels' as they are called in machine learning) based on the predictor variables (features). The idea is that linear data can be approximated well with a 'best fitted' line. The model assumes:
-  1. Linearity
-  2. Homoscedasticity
-  3. Multivariate normality
-  4. Independence of errors
-  5. Lack of multicollinearity
+### **_SupportVectorRegression_**
+Support Vector Machine can also be used as a regression method, maintaining all
+the main features that characterize the algorithm (maximal margin). The Support
+Vector Regression (SVR) uses the same principles as the SVM for classification,
+with only a few minor differences. First of all, because output is a real
+number it becomes very difficult to predict the information at hand, which has
+infinite possibilities. In the case of regression, a margin of tolerance is set
+in approximation to the SVM which would have already requested from the
+problem. But besides this fact, there is also a more complicated reason, the
+algorithm is more complicated therefore to be taken in consideration. However,
+the main idea is always the same: to minimize error, individualizing the
+hyperplane which maximizes the margin, keeping in mind that part of the error
+is tolerated.
 
-  * `howItWorksLinearRegression.py` - The algorithm coded *from scratch*.
-  * `linearregression.pickle` - The trained data saved as a pickle file to save computing time. (see `regularLinearRegression.py`)
-  * `regularLinearRegression.py` - The algorithm coded with Scikit-learn (python library for machine learning).
-  * `regularLinearRegression.r` - Simple linear regression in R.
-  * `regularLinearRegression2.py` - Different variation of it using my new data preprocessing template.
-  * `Salary_Data.csv` - Data used in `regularLinearRegression2.py` and `regularLinearRegression.r`.
+  * `Position_Salaries.csv` - Data used in `regularSVMRegression.py` and `regularSVMRegression.r`.
+  * `regularSVMRegression.py` - SVM Regression in Python.
+  * `regularSVMRegression.r` - SVM Regression in R.
