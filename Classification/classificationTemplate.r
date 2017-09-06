@@ -26,9 +26,7 @@ classifier = # create classifier
 
 
 # Predict the test_set results by using the classifier
-prob_pred = predict(classifier, type = 'response',
-                    newdata = test_set[-3])
-y_pred = ifelse(prob_pred>0.5, 1, 0)
+  y_pred = predict(classifier, newdata = test_set[-3])
 
 
 # Making the Confusion Matrix
@@ -43,8 +41,7 @@ X1 = seq(min(set[, 1]) - 1, max(set[, 1]) + 1, by = 0.01)
 X2 = seq(min(set[, 2]) - 1, max(set[, 2]) + 1, by = 0.01)
 grid_set = expand.grid(X1, X2)
 colnames(grid_set) = c('Age', 'EstimatedSalary')
-prob_set = predict(classifier, type = 'response', newdata = grid_set)
-y_grid = ifelse(prob_set>0.5, 1, 0)
+y_grid = predict(classifier, newdata = grid_set)
 plot(set[, -3],
      main = 'Classifier (Training set)',
      xlab = 'Age', ylab = 'Estimated Salary',
@@ -62,8 +59,7 @@ X1 = seq(min(set[, 1]) - 1, max(set[, 1]) + 1, by = 0.01)
 X2 = seq(min(set[, 2]) - 1, max(set[, 2]) + 1, by = 0.01)
 grid_set = expand.grid(X1, X2)
 colnames(grid_set) = c('Age', 'EstimatedSalary')
-prob_set = predict(classifier, type = 'response', newdata = grid_set)
-y_grid = ifelse(prob_set>0.5, 1, 0)
+y_grid = predict(classifier, newdata = grid_set)
 plot(set[, -3],
      main = 'Classifier (testing set)',
      xlab = 'Age', ylab = 'Estimated Salary',

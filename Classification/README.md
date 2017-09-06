@@ -17,13 +17,16 @@ Folder names are **bolded** while filenames are `highlighted` for readability.
 Currently empty, check back soon for updates.
 
 ### **_KernelSVM_** 
-Kernel SVM is basically an SVM (see folder **SupportVectorMachine**) which has some 'slack' and allows features to be 'wrongly' classified to avoid overfitting the classifier. This also includes kernels. Kernels use the inner product to help us transform the feature space to make it possible for Support Vector Machines to create a good hyperplane with non-linear feature sets.
+Kernel SVM is basically an SVM (see folder **SupportVectorMachine**) which operates with kernels. Kernels use the inner product to help us transform the feature space to make it possible for Support Vector Machines to create a good hyperplane  to effectively classify non-linear feature sets.
 
-I also added methods to check and predict non-linear data.
+When I say that the SVM has a "soft margin" then that means that it has some 'slack' and allows features to be 'wrongly' classified to avoid overfitting the classifier. This also includes kernels. 
 
   * `breast-cancer-wisconsin.data` - Data used in some of the examples.
   * `howItWorksSoftMarginSVM.py` - The algorithm coded *from scratch*. This can basically do the same as the "*from scratch*" algorithm in folder **SupportVectorMachine**, but this is much more complex to account for margins and more dimensions involved.
   * `regularSoftMarginSVM.py` - The algorithm coded with Scikit-learn (python library for machine learning).
+  * `regularKernelSVM.py`- Kernel SVM in Python
+  * `regularKernelSVM.r`- Kernel SVM in R
+  * `Social_Network_Ads.csv` - The Data used in `regularKernelSVM.py` and `regularKernelSVM.r`.
 
 ### **_K-NearestNeighbors_** 
 The K-nearest neighbors algorithm is a method used for classification and regression. The idea of K Nearest Neighbors classification is to best divide and separate the data based on clustering the data and to classify based on the proximity to it's K closest neighbors and their classifications. Where 'k' is the number of neighbors that are involved in the classification.
