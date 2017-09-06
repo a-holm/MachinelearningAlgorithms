@@ -34,7 +34,7 @@ The K-nearest neighbors algorithm is a method used for classification and regres
   * `regularNearestNeighbors.py` - The algorithm coded with Scikit-learn (python library for machine learning).
   * `regularNearestNeighbors2.py` - The algorithm written in Python with the classification template.
   * `regularNearestNeighbors.r` - The algorithm written in R.
-  * `Social_Network_Ads` - The Data used in the examples `regularNearestNeighbors2.py` and `regularNearestNeighbors.r`.
+  * `Social_Network_Ads.csv` - The Data used in the examples `regularNearestNeighbors2.py` and `regularNearestNeighbors.r`.
 
 ### **_LogisticRegression_**
 In statistics, logistic regression, or logit regression, or logit model is a regression model where the dependent variable (DV) is categorical. This project covers the case of a binary dependent variable—that is, where it can take only two values, "0" and "1", which represent outcomes such as pass/fail, win/lose, alive/dead or healthy/sick. 
@@ -43,7 +43,7 @@ The binary Logistic regression model is an example of a qualitative response/dis
 
   * `regularLogisticRegression.py` - The Algorithm written in Python.
   * `regularLogisticRegression.r` - The Algorithm written in R.
-  * `Social_Network_Ads` - The Data used in the examples.
+  * `Social_Network_Ads.csv` - The Data used in the examples.
 
 ### **_NaiveBayes_**
 Currently empty, check back soon for updates.
@@ -59,3 +59,6 @@ The algorithm coded from scratch is a bare-bones and simple implementation to ma
   * `breast-cancer-wisconsin.data` - Data used in some of the examples.
   * `howItWorksSupportVectorMachine.py` - The algorithm coded *from scratch*.
   * `regularSupportVectorMachine.py` - The algorithm coded with Scikit-learn (python library for machine learning).
+  * `regularSupportVectorMachine2.py` - The algorithm written in Python with the classification template.
+  * `regularSupportVectorMachine.r` - The algorithm written in R.
+  * `Social_Network_Ads.csv` - The Data used in the examples `regularSupportVectorMachine2.py` and `regularSupportVectorMachine.r`.
