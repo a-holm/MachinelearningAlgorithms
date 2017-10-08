@@ -13,6 +13,7 @@ Folder names are **bolded** while filenames and warnings are `highlighted` for r
 
 ## FOLDER CONTENTS (in alphabetical order):
 
+
 ### **_Association Rule Learning_** 
 Association rules are if/then statements that help uncover relationships between seemingly unrelated data in a relational database or other information repository. An example of an association rule would be "If a customer buys a dozen eggs, he is 80% likely to also purchase milk."
 
@@ -103,3 +104,7 @@ Reinforcement learning (RL) is an area of machine learning inspired by behaviori
 
   - **ThompsonSampling**:  `(empty, will be updated soon)`
   - **UpperConfidenceBound**: `(empty, will be updated soon)`
+
+
+### **_statnprob_** 
+Misc statistics and probablitiy exercises.
