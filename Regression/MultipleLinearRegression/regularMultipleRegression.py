@@ -48,16 +48,23 @@ label_pred = regressor.predict(feature_test)
 
 # Building the optimal model using the Backward Elimenation method
 # Due to statsmodels we need to add an intercept column
-features = np.append(arr=np.ones((50, 1)).astype(int), values=features, axis=1)
+features = np.append(
+    arr=np.ones(
+        (np.shape(features)[0], 1)).astype(int), values=features, axis=1)
 columnlist = list(range(features.shape[1]))  # liste med num rader
 significant = 0.05
+pre_r_value = 0
 while True:
     features_opt = features[:, columnlist]
     regressor_OLS = sm.OLS(endog=labels, exog=features_opt).fit()
     pvalues = regressor_OLS.pvalues
+    r_value = regressor_OLS.rsquared_adj
     if (np.max(pvalues) > significant):
+        if (pre_r_value < r_value):
+            break
         i = int(np.where(pvalues == np.max(pvalues))[0])
         columnlist.pop(i)
+        pre_r_value = r_value
     else:
         break
 regressor_OLS.summary()
